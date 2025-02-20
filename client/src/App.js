@@ -161,8 +161,8 @@ function App() {
       setPage(prev => prev + 1);
       setError(null);
     } catch (error) {
-      console.error('获取图片失败:', error);
-      setError('获取图片失败');
+      console.error('failed to fetch images:', error);
+      setError('failed to fetch images');
     } finally {
       setIsLoading(false);
     }
@@ -195,7 +195,7 @@ function App() {
         }
       }));
     } catch (error) {
-      console.error('点赞失败:', error);
+      console.error('failed to like image:', error);
     }
   };
 
@@ -210,7 +210,7 @@ function App() {
         }
       }));
     } catch (error) {
-      console.error('获取点赞状态失败:', error);
+      console.error('failed to fetch like status:', error);
     }
   };
 
